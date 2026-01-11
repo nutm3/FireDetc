@@ -10,80 +10,77 @@
 ## 🖥️ Dashboard Overview
 ![Main UI Preview](imgs/preview-webappUI-firedetc.png)
 
-## 📖 Overview
-**FIREDETC** is a specialized security command center designed for Offensive Security practitioners and System Auditors. It bridges the gap between the **WSL (Windows Subsystem for Linux)** environment and the **Windows Host**, providing real-time visibility into the host's security posture and network configuration through high-performance interop bridges.
+## 📖 Product Summary
+**FIREDETC** is a proprietary security orchestration tool designed for professional Offensive Security practitioners and System Auditors. It facilitates a high-speed data bridge between the **WSL (Windows Subsystem for Linux)** environment and the **Windows Host**, enabling rapid identification of host security posture and network metadata from a unified command interface.
 
 ---
 
-## 🚀 Key Modules & Features
+## 🚀 Key Capabilities
 
-### 1. 🛡️ Windows Security Posture
-Audits the status of the Windows Firewall and lists active Antivirus/EDR solutions.
-- **Firewall Auditor**: Monitor Domain, Private, and Public profiles.
-- **AV/EDR Detection**: Identifies 3rd party security products via WMI `SecurityCenter2`.
+### 🛡️ 1. Host Security Auditor
+Performs automated auditing of Windows security configurations.
+- **Firewall Intelligence**: Real-time status reporting for Domain, Private, and Public profiles.
+- **Security Product Identification**: Automated detection of active Antivirus and EDR solutions.
 
 | Firewall Profiles | 3rd Party Security | Security Checklist |
 |-------------------|--------------------|--------------------|
 | ![Windows Defender](imgs/preview-windowsDefenderProfiles.png) | ![3rd Party AV](imgs/preview-3rdPartySecurity.png) | ![Checklist](imgs/preview-SecurityProductChecklist.png) |
 
-### 2. 📡 Network Intelligence
-Precision monitoring and speed auditing from within WSL.
-- **High-Precision Speed Audit**: Measures bandwidth via .NET `WebClient` interop.
-- **Live Wi-Fi Bridge**: Real-time connected SSID and signal strength monitoring.
+### 📡 2. Precision Network Auditing
+Integrated tools for high-fidelity network performance and environmental sensing.
+- **Speed Audit Engine**: Real-time bandwidth measurement optimized for low-latency assessment.
+- **Environmental Sensing**: Live monitoring of Wi-Fi metrics including SSID identification and signal strength analytics.
 
 ![Network Speed](imgs/preview-networkSpeed.png)
 
-### 3. 🔐 Wireless Credential Recovery
-Seamless extraction of stored Wi-Fi credentials from the host registry.
-- **Profile Extractor**: Enumerate all stored SSIDs.
-- **Credential Recovery**: One-click password extraction (`key=clear`).
+### 🔐 3. Wireless Credential Auditor
+Advanced utility for managing and verifying wireless network security metadata.
+- **Registry Reconnaissance**: Automated enumeration of all stored wireless profiles.
+- **Credential Verification**: Direct extraction of secure network keys for audit verification.
 
 ![WiFi Profiles](imgs/preview-storedWifiProfiles.png)
 
 ---
 
-## 🏗️ Technical Architecture
-FireDetc uses a dual-interop approach to ensure maximum reliability and information density.
+## 📺 Operational Monitoring
+FireDetc features a high-density operational dashboard for real-time telemetry.
 
 ![Console Logs](imgs/preview-webappConsole-firedetc.png)
 
-- **WSL/App Log**: Application-level events and API tracking.
-- **Windows/PS Log**: Raw PowerShell bridge output for technical verification.
+- **App Telemetry**: Tracks application-level operations and API transaction logs.
+- **System Bridge Feed**: Raw telemetry from the underlying Windows/WSL interop layer.
 
 ---
 
-## 📥 Getting Started
+## 📥 Deployment Guide
 
-### Prerequisites
-- **OS**: Windows 10/11 with WSL2 (Kali Linux or Ubuntu recommended).
-- **Environment**: Node.js installed on your WSL instance.
-- **Privileges**: Terminal should be run as **Administrator** for full bridge functionality.
+### System Requirements
+- **OS**: Windows 10/11 with WSL2 Subsystem.
+- **Prerequisites**: Node.js environment configured within WSL.
+- **Access Level**: Host-level Administrator privileges required for Bridge initialization.
 
-### Installation & Usage
-The project includes a unified management script `build.sh` to handle everything.
+### Execution
+The deployment is managed through the unified `build.sh` orchestration script.
 
-1. **Clone & Setup**:
+1. **Initialization**:
    ```bash
-   git clone https://github.com/nutm3/FireDetc.git
    cd FireDetc/dist
    chmod +x build.sh
    ./build.sh
    ```
 
-2. **Select Operation**:
-   When you run `./build.sh`, you will see the management menu:
-   - **Option 1**: Install necessary Node.js dependencies.
-   - **Option 2**: Start the **Production Server** (Optimized for audit).
-   - **Option 3**: Start the **Development Server** (Auto-reload enabled).
-   - **Option 4**: Clean the environment (Removes `node_modules`).
+2. **Management Options**:
+   - **Install**: Bootstrap required dependencies.
+   - **Run (Production)**: Launch the optimized audit server.
+   - **Run (Dev)**: Monitor real-time codebase modifications.
+   - **Clean**: Sanitize the local environment.
 
-| Initialization | Production Mode | Development Mode |
-|----------------|-----------------|------------------|
+| Initialization | Production Execution | Development Execution |
+|----------------|----------------------|-----------------------|
 | ![Setup First](imgs/preview-setupFirst-firedetc.png) | ![Prod Mode](imgs/preview-setupStartProduction-firedetc.png) | ![Dev Mode](imgs/preview-setupStartDevelopment-firedetc.png) |
 
-3. **Access Dashboard**:
-   Once running, open your browser at:
-   `http://localhost:9115`
+3. **Interface Access**:
+   Access the tactical dashboard at: `http://localhost:9115`
 
 ---
 
@@ -95,4 +92,4 @@ The project includes a unified management script `build.sh` to handle everything
 ---
 
 ## ⚖️ Legal Disclaimer
-*FireDetc is developed for educational and authorized security auditing purposes only. Use of this software for attacking targets without prior mutual consent is illegal. The author is not responsible for any misuse of this tool.*
+*FireDetc is intended strictly for authorized security auditing and professional assessment purposes. Unauthorized use against targets without explicit consent is strictly prohibited and illegal. The author assumes no liability for misuse.*
