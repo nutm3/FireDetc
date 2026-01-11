@@ -1,0 +1,18 @@
+# FireDetc Git Ignore
+# Ignore node_modules across all subdirectories
+**/node_modules/
+node_modules/
+dist/node_modules/
+
+# Ignore lock files if preferred (npm)
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# NOTE: .env is NOT ignored as per user request

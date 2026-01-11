@@ -1,0 +1,17 @@
+{
+  "name": "firedetc-backend",
+  "version": "1.0.0",
+  "description": "Firewall Detector Command Center Backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Falatehan Anshor",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "socket.io": "^4.8.3"
+  }
+}

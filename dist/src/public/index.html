@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireDetc | Command Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo-area">
+            <div class="logo">
+                <span class="fire">FIRE</span><span class="detc">DETC</span>
+                <span class="version">V1.0</span>
+            </div>
+            <div class="credit">Created by <a href="https://github.com/nutm3" target="_blank"
+                    class="author-link">Falatehan Anshor</a></div>
+        </div>
+        <div class="header-right">
+            <div class="wifi-group">
+                <div id="wifi-status" class="wifi-badge">
+                    <div class="wifi-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                        </svg>
+                    </div>
+                    <span class="wifi-name">WiFi IDLE</span>
+                </div>
+                <button id="wifi-toggle-btn" class="scan-mini-btn">LIVE: OFF</button>
+            </div>
+            <button id="scan-btn" class="primary-btn">Run Full Scan</button>
+        </div>
+        </header>
+
+        <main>
+            <section class="top-cards">
+                <div class="card glass">
+                    <h3>Windows Defender Profiles</h3>
+                    <div id="defender-profiles" class="status-list">
+                        <div class="loading-mini">Waiting for scan...</div>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <h3>3rd Party Security</h3>
+                    <div id="third-party-list" class="status-list">
+                        <div class="loading-mini">Waiting for scan...</div>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <h3>Network Speed</h3>
+                    <div class="speed-controls">
+                        <button id="speed-test-btn" class="scan-mini-btn">RUN SPEED TEST</button>
+                        <button id="speed-toggle-visibility" class="scan-mini-btn">SHOW RESULT</button>
+                    </div>
+                    <div id="speed-result" class="status-list hidden">
+                        <div class="status-item">
+                            <span class="status-label">Download Speed</span>
+                            <span id="download-val" class="status-val grey">-- Mbps</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Upload Speed</span>
+                            <span id="upload-val" class="status-val grey">-- Mbps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <h3>Stored WiFi Profiles</h3>
+                    <div class="speed-controls">
+                        <button id="wifi-profiles-btn" class="scan-mini-btn">REFRESH PROFILES</button>
+                    </div>
+                    <div id="wifi-profiles-list" class="status-list wifi-scroller">
+                        <div class="loading-mini">Click Refresh to Load...</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="checklist-section">
+                <div class="card glass">
+                    <h3>Security Product Checklist (Risk Detection)</h3>
+                    <div id="security-checklist" class="checklist-grid">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="dual-console">
+                <div class="console-box" id="console-a-box">
+                    <div class="console-header">
+                        <span class="title">WSL/App Log</span>
+                        <div class="controls">
+                            <button onclick="clearConsole('console-a')">CLEAR</button>
+                            <button onclick="copyConsole('console-a')">COPY</button>
+                        </div>
+                    </div>
+                    <div class="console-body" id="console-a"></div>
+                </div>
+                <div class="console-box" id="console-b-box">
+                    <div class="console-header">
+                        <span class="title">Windows/PS Log</span>
+                        <div class="controls">
+                            <button onclick="clearConsole('console-b')">CLEAR</button>
+                            <button onclick="copyConsole('console-b')">COPY</button>
+                        </div>
+                    </div>
+                    <div class="console-body" id="console-b"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created by <a href="https://github.com/nutm3" target="_blank">Falatehan Anshor</a></p>
+        </footer>
+    </div>
+    <script src="script.js?v=1.0.1"></script>
+</body>
+
+</html>
